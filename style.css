@@ -1,0 +1,159 @@
+body{
+  /*  background-color: #009999;*/
+    background-color:grey;
+    
+}
+#title{
+    text-align: center;
+    color:white;
+    text-decoration: underline;
+    text-decoration-color:red;
+    font-size:50px;
+}
+.game{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+    margin:auto;
+    width:900px;
+    border: 4px solid red;
+    border-radius: 15px;
+    padding:20px;
+}
+.flip-container{
+    cursor: pointer;
+    position: relative;
+    height: 250px;  width: 190px;
+    margin:auto;
+    text-align: center;
+}
+.flipper{
+    position:absolute;
+    width:100%;  height:100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius:25px;
+}
+ img{ border-radius:25px; }
+.front{
+    position:absolute;
+    height:100%;  width:100%;
+    backface-visibility: hidden;
+}
+.back{
+    position:absolute;
+    height:100%; width:100%;
+    background-color:black;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+table{
+    margin:auto;
+    width:450px;  font-size:25px;
+    font-weight:bold;
+    color:white;
+}
+
+.modal-container{
+    visibility:hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+      position:fixed;
+      top:0; left:0; right:0; bottom:0;
+      animation-name: modalopen;
+      animation-duration:5s;
+}
+.modal{
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position:absolute;
+    overflow: hidden;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    max-width:80%; width:450px;  height:250px;
+    text-align:center;
+    
+}
+@keyframes modalopen{
+      from{  opacity:0; }
+      to{   opacity:1;  }
+}
+#dialog{
+    font-size:30px;
+    margin-top:30px;
+    color:white;
+}
+#dialog-btn{
+    width:150px;  height:50px;
+    border-radius:25px;
+    background-color:white;
+    color:rgb(184, 17, 235);
+    border:none;  outline:none; cursor: pointer;
+}
+#dialog-btn:hover{
+    background-color:rgb(184, 17, 235);
+    color:white;
+}
+
+@media only screen and (max-width:950px){
+    .game{   width:700px; }
+    .flip-container{
+        height: 230px; width: 160px;
+        margin:auto;    
+    }
+}
+
+@media only screen and (max-width:800px)
+{
+    .game{
+        grid-template-columns: repeat(3, 1fr);
+        width:530px;
+    }
+    table{ width:500px; }
+}
+
+@media only screen and (max-width:600px){
+    .game{  width:400px;  }
+    .flip-container{
+        height: 200px;  width: 120px;
+        margin:auto;    
+    }
+    .title{
+        text-align:center;
+        margin:auto;
+    }
+    table{ width:400px; }
+}
+
+@media only screen and (max-width:450px){
+    .game{
+        width:300px;
+        margin:auto;
+    }
+    .flip-container{
+        height: 150px; width: 100px;
+        margin:auto;    
+    }
+    .title{
+        text-align:center;
+        margin:auto;
+    }
+    table{  width:300px; }
+    .flipper{   border-radius:15px;  }
+
+    img{   border-radius:15px;  }
+}
+
+@media only screen and (max-width:330px){
+    .game{
+        width:270px;
+        margin:auto;
+    }
+    .flip-container{
+        height: 140px;   width: 90px;
+        margin:auto;    
+    }
+    table{  width:250px; }
+}
+

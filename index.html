@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Flip The Card</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        </head>
+    <body onload="loadContent()">
+        <h1 id="title">Flip The card</h1>
+        <table>
+            <tr>
+                <td style="text-align:left">Score:- <span id="score" >0</span></td>
+                <td style="text-align:right">Lives:- <span id="lives" style="color:red">5</span></td>
+            </tr>
+        </table>
+        <div class="game" id="game" >
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal" >
+            <h1 style="font-family: 'Press Start 2P', cursive; color:white">Game Over</h1>
+            <p id="dialog"> Your Score Is:- <span id="totalScore">0</span></p>
+            <button id="dialog-btn" onClick="window.location.reload();">Play Again</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
